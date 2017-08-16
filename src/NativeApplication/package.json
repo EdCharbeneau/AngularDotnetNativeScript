@@ -1,0 +1,46 @@
+{
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "readme": "NativeScript Application",
+  "repository": "<fill-your-repository-here>",
+  "nativescript": {
+    "id": "org.nativescript.sample",
+    "tns-android": {
+      "version": "3.1.1"
+    }
+  },
+  "scripts": {
+    "lint": "tslint \"app/**/*.ts\"",
+    "livesync":  "tns run android",
+    "sharedLibs": "rimraf .\\app\\sharedLibs && xcopy ..\\WebServerClient\\WebServerClient\\ClientApp\\app\\sharedLibs\\*.* .\\app\\sharedLibs /I"
+  },
+  "dependencies": {
+    "@angular/animations": "~4.1.0",
+    "@angular/common": "~4.1.0",
+    "@angular/compiler": "~4.1.0",
+    "@angular/core": "~4.1.0",
+    "@angular/forms": "~4.1.0",
+    "@angular/http": "~4.1.0",
+    "@angular/platform-browser": "~4.1.0",
+    "@angular/router": "~4.1.0",
+    "nativescript-angular": "~3.1.0",
+    "nativescript-theme-core": "~1.0.2",
+    "reflect-metadata": "~0.1.8",
+    "rxjs": "~5.4.0",
+    "tns-core-modules": "~3.1.0",
+    "zone.js": "~0.8.2"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.4.5",
+    "babel-types": "6.4.5",
+    "babylon": "6.4.5",
+    "codelyzer": "^3.0.1",
+    "lazy": "1.0.11",
+    "nativescript-dev-sass": "^1.2.0",
+    "nativescript-dev-typescript": "~0.5.0",
+    "node-sass": "*",
+    "tslint": "^5.4.3",
+    "typescript": "~2.2.1"
+  }
+, "-vs-binding":{"AfterBuild":["sharedLibs"]}
+}

@@ -1,0 +1,19 @@
+<GridLayout class="page page-content" tkMainContent>
+    <Label *ngIf="!forecasts" text="No Data" class="page-placeholder"></Label>
+
+    <ListView class="list-group" [items]="forecasts" separatorColor="white">
+        <ng-template let-forecast="item">
+            <GridLayout rows="* auto" columns="*" class="list-group-item active" style="border:1;">
+                <Label row="0" [text]="forecast.dateFormatted"></Label>
+                <StackLayout row="1" col="0" backgroundColor="white" class="list-group-item">
+                    <Label class="list-group-item-heading" [text]="forecast.summary"></Label>
+                    <GridLayout columns="*,*" rows="auto">
+                        <Label [text]="forecast.temperatureC + '`C'" class="temperature" col="0" row="0" horizontalAlignment="center" ></Label>
+                        <Label [text]="forecast.temperatureF + '`F'" class="temperature" col="1" row="0" horizontalAlignment="center" ></Label>
+                    </GridLayout>
+                </StackLayout>
+            </GridLayout>
+        </ng-template>
+    </ListView>
+
+</GridLayout>
