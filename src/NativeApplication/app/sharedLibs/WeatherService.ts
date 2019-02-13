@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable'
 import 'rxjs/add/operator/map'
 import { Http } from '@angular/http';
 
-const API_URI = 'http://169.254.80.80:55123/api/SampleData/WeatherForecasts';
+const API_URI = 'http://192.168.43.213:55123/api/SampleData/WeatherForecasts';
 
 @Injectable()
 export class WeatherService {
